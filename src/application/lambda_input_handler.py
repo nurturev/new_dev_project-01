@@ -15,8 +15,8 @@ def lambda_handler(event, context):
     """
     try:
         # Extract bucket_name and file_key from environment variables
-        bucket_name = "nv-tenant-models"
-        file_key = "202/pdl_raw_company_info/pdl_raw_company_info_1732559219.335818.csv"
+        bucket_name = config.S3_BUCKET_NAME
+        file_key = config.S3_FILE_KEY
 
         # Extract operations from event
         body = json.loads(event.get("body", "{}"))
