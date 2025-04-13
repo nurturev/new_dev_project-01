@@ -22,7 +22,7 @@ async def process_data(request: Request):
         operations = body.get("operations", [])
 
         # Define bucket & file key
-        bucket_name = "nv-tenant-dataset-models"
+        bucket_name = "nv-tenant-models"
         file_key = "202/pdl_raw_company_info/pdl_raw_company_info_1732559219.335818.csv"
     
         facade = AgentFacade(bucket_name, file_key)
