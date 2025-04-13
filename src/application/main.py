@@ -4,7 +4,7 @@ from core.yoy_growth import calculate_yoy_growth
 import pandas as pd
 
 def main():
-    bucket_name = "nv-tenant-dataset-models"
+    bucket_name = "nv-tenant-models"
     file_key = "202/pdl_raw_company_info/pdl_raw_company_info_1732559219.335818.csv"
     
     s3_loader = S3Loader(bucket_name)
