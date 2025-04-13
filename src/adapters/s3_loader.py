@@ -4,7 +4,7 @@ import pandas as pd
 from io import StringIO
 
 class S3Loader:
-    def __init__(self, bucket_name, region='us-east-1'):
+    def __init__(self, bucket_name, region='ap-south-1'):
         self.s3 = boto3.client('s3', region_name=region)
         self.bucket_name = bucket_name
 
