@@ -22,9 +22,9 @@ async def process_data(request: Request):
         operations = body.get("operations", [])
 
         # Define bucket & file key
-        bucket_name = "nv-tenant-models"
-        file_key = "202/pdl_raw_company_info/pdl_raw_company_info_1732559219.335818.csv"
-    
+        bucket_name = config.S3_BUCKET_NAME
+        file_key = config.S3_FILE_KEY
+
         facade = AgentFacade(bucket_name, file_key)
         result = facade.process_request({"operations": operations})
 
