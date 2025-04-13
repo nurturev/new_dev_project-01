@@ -3,7 +3,7 @@ from application.agent_facade import AgentFacade
 import json
 
 router = APIRouter(
-    prefix="/process",
+    prefix="/myapp/v1/process",
 )
 
 @router.post("/")
