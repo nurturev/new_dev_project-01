@@ -15,7 +15,7 @@ def lambda_handler(event, context):
     """
     try:
         # Extract bucket_name and file_key from environment variables
-        bucket_name = "nv-tenant-dataset-models"
+        bucket_name = "nv-tenant-models"
         file_key = "202/pdl_raw_company_info/pdl_raw_company_info_1732559219.335818.csv"
 
         # Extract operations from event
