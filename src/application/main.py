@@ -1,7 +1,16 @@
+
+import sys
+import os
+
+# Add the 'src' directory to sys.path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
+
+import config 
 from adapters.s3_loader import S3Loader
 from core.employee_growth import process_employee_growth
 from core.yoy_growth import calculate_yoy_growth
 import pandas as pd
+
 
 def main():
     bucket_name = config.S3_BUCKET_NAME
