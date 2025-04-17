@@ -48,3 +48,4 @@ jobs:
           AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
           SERVERLESS_ACCESS_KEY: ${{ secrets.SERVERLESS_ACTIONS }}
         run: serverless deploy --stage prod
+
