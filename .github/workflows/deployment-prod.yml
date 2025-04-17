@@ -30,11 +30,6 @@ jobs:
       - name: Install Latest Serverless Framework
         run: npm install -g serverless@latest
 
-      - name: Log in to Serverless Framework
-        env:
-          SERVERLESS_ACCESS_KEY: ${{ secrets.SERVERLESS_ACTIONS }}
-        run: serverless login
-
       - name: Install Python Dependencies
         run: |
           python -m pip install --upgrade pip
@@ -48,4 +43,3 @@ jobs:
           AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
           SERVERLESS_ACCESS_KEY: ${{ secrets.SERVERLESS_ACTIONS }}
         run: serverless deploy --stage prod
-
