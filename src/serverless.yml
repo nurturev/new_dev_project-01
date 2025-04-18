@@ -2,37 +2,24 @@ service: employee-analytics-service
 
 provider:
   name: aws
-  runtime: python3.9
+  
   region: ap-south-1
   memorySize: 512
   timeout: 30
-  architecture: x86_64
 
-
-
-functions:
-  apiHandler:
-    handler: lambda_handler.lambda_handler
-    events:
-      - http:
-          path: process
-          method: post
-
-package:
-  exclude:
-    - __pycache__/**
-    - tests/**
-    - README.md
-
-plugins:
-  - serverless-python-requirements
-
-custom:
-  pythonRequirements:
-    dockerizePip: true
-
+  iam:
+    role: arn:aws:iam::979176640062:role/Lambda_execution_role
   ecr:
     images:
       latest:
         path: ../../ # Specify the root directory of the Docker context
         file: src/Dockerfile # Specify the relative path to the Dockerfile
+
+
+functions:
+  new_dev:
+    name: new_dev
+    timeout: 900
+    image:
+      name: latest
+
