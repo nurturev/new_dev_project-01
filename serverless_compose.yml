@@ -1,0 +1,5 @@
+services:
+
+  src:
+    path: src
+
