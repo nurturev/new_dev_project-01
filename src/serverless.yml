@@ -14,6 +14,7 @@ provider:
         - "s3:GetObject"
       Resource: "*"
 
+
 functions:
   apiHandler:
     handler: lambda_handler.lambda_handler
