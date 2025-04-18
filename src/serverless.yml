@@ -38,5 +38,5 @@ custom:
   ecr:
     images:
       latest:
-        path: ../../ # Specify the root directory of the Docker context
+        path: ../ # Specify the root directory of the Docker context
         file: src/Dockerfile # Specify the relative path to the Dockerfile
