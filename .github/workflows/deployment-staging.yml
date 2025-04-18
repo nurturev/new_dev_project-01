@@ -38,6 +38,7 @@ jobs:
       - name: Deploy Lambda functions
         run: |
           sls deploy --stage staging
-
+        working-directory: ./src
+        
         env:
           AWS_REGION: ap-south-1
