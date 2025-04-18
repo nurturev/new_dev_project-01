@@ -24,12 +24,6 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Install Docker
-        run: |
-          sudo apt-get update
-          sudo apt-get remove -y containerd
-          sudo apt-get install -y docker.io
-
 
       - name: Verify Node.js Version
         run: node --version
