@@ -1,5 +1,5 @@
 services:
 
   src:
-    path: src
+    path: ./src
 
