@@ -31,6 +31,12 @@ package:
 plugins:
   - serverless-python-requirements
 
+ecr:
+  images:
+    latest:
+      path: ../../  # This points to the root directory of your project
+      file: src/Dockerfile  # This points to the Dockerfile inside the 'src' directory
+
 custom:
   pythonRequirements:
     dockerizePip: true
