@@ -8,11 +8,6 @@ provider:
   timeout: 30
   architecture: x86_64
 
-  iamRoleStatements:
-    - Effect: "Allow"
-      Action:
-        - "s3:GetObject"
-      Resource: "*"
 
 
 functions:
