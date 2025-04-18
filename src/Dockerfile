@@ -11,4 +11,4 @@ RUN pip install --upgrade pip && pip install -r requirements.txt
 COPY . .
 
 # Command to run the Lambda function
-CMD ["lambda_handler.lambda_handler"]
+CMD ["src/lambda_handler.lambda_handler"]
